@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use("/practica2", (req, res)=>{
   console.log("En linea")
+  res.send("Aqui tamos")
 })
 
 //app.use("/videojuegos",vjRoutes);
