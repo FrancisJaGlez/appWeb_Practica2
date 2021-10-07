@@ -11,6 +11,10 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.use("/practica2", (req, res)=>{
+  console.log("En linea")
+})
+
 //app.use("/videojuegos",vjRoutes);
 
 //Que la aplicación escuche peticiones
