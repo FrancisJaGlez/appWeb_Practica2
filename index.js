@@ -1,6 +1,7 @@
 const express = require("express")
 const path = require("path")
 const vjRoutes = require('./routes/videojuegos')
+const vjRoutes1 = require('./routes/consola')
 const sequelize = require('./utils/database')
 //Creación de la aplicación web
 const app = express();
@@ -17,6 +18,7 @@ app.use("/practica2", (req, res)=>{
 })
 
 app.use("/videojuegos",vjRoutes);
+app.use("/consolas",vjRoutes1);
 
 //Que la aplicación escuche peticiones
 sequelize.sync()

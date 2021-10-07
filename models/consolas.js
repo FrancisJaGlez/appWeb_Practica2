@@ -6,7 +6,6 @@ const Consola = (sequelize)=>{
             allowNull: false,
             primaryKey: true
         },
-        nombre:Sequelize.STRING
     })
 }
 
