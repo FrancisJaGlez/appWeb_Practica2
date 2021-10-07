@@ -4,7 +4,7 @@ const Sequelize = require("sequelize")
 //Objeto de Conexion
 const sequelize= new Sequelize('base1','userX','root',{
     dialect: 'mysql',
-    host: '3.94.165.232', //Direccion IP
+    host: '54.227.9.233', //Direccion IP
     define:{
         //No coloques createdAt y updateAt
         timestamps:false,
