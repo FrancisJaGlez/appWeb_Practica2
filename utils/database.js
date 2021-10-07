@@ -2,7 +2,7 @@ const {aplicarRelaciones} = require('./relations')
 //Representa a la biblioteca sequelize
 const Sequelize = require("sequelize")
 //Objeto de Conexion
-const sequelize= new Sequelize('base1','userX','root',{
+const sequelize= new Sequelize('amixes_poderosos','user1','root',{
     dialect: 'mysql',
     host: '54.227.9.233', //Direccion IP
     define:{
