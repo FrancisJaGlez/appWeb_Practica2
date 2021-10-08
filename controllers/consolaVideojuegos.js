@@ -1,11 +1,11 @@
 const path = require('path')
-const Videojuego = require('../utils/database').models.videojuego
+const ConsolaVideojuego = require('../utils/database').models.consolaVideojuego
 
-exports.postAgregarVideojuego = (req, res)=>{
+exports.postAgregarConsolaVideojuego = (req, res)=>{
     console.log(req.body)
-    Videojuego.create(req.body)
+    ConsolaVideojuego.create(req.body)
     .then(result=>{
-        console.log("Videojuego creado exitosamente")
+        console.log("Consola creada exitosamente")
         res.json({estado:"aceptado"})
     })
     .catch((err)=>{
@@ -15,8 +15,8 @@ exports.postAgregarVideojuego = (req, res)=>{
 }
 
 
-exports.getObtenerVideojuegos = (req, res)=>{
-    Videojuego.findAll()
+exports.getObtenerConsolaVideojuego = (req, res)=>{
+    ConsolaVideojuego.findAll()
         .then(vjs=>{
             console.log(vjs)
             res.json(vjs)
@@ -28,11 +28,11 @@ exports.getObtenerVideojuegos = (req, res)=>{
 }
 
 
-exports.postBorrarVideojuego = (req, res)=>{
+exports.postBorrarConsolaVideojuego = (req, res)=>{
     console.log(req.body)
-    Videojuego.destroy({
+    ConsolaVideojuego.destroy({
         where:{
-            id:req.body.id
+            idCV:req.body.idCV
         }
     })
     .then(()=>{
@@ -46,15 +46,15 @@ exports.postBorrarVideojuego = (req, res)=>{
 }
 
 
-exports.postActualizarVideojuego = (req, res)=>{
+exports.postActualizarConsolaVideojuego = (req, res)=>{
     console.log(req.body)
     
-    Videojuego.update({
-        nombre: req.body.nombre
+    ConsolaVideojuego.update({
+        lanzamiento: req.body.lanzamiento
         
     },{
         where:{
-            id:req.body.id
+            idCV:req.body.idCV
         }
     })
     .then(()=>{

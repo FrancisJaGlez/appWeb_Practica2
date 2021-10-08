@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize")
+
 const Consola = (sequelize)=>{
     sequelize.define('consola',{
         id:{

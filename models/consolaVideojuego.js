@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize")
+
 const ConsolaVideojuego = (sequelize)=>{
     sequelize.define('consolaVideojuego',{
         idCV:{

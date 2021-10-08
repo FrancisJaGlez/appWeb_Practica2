@@ -1,4 +1,5 @@
 const path = require('path')
+
 const Consola = require('../utils/database').models.consola
 
 exports.postAgregarConsola = (req, res)=>{
@@ -27,6 +28,7 @@ exports.getObtenerConsolas = (req, res)=>{
         })
 }
 
+
 exports.postBorrarConsola = (req, res)=>{
     console.log(req.body)
     Consola.destroy({
@@ -43,6 +45,8 @@ exports.postBorrarConsola = (req, res)=>{
         res.json({estado:"error"})
     })
 }
+
+
 exports.postActualizarConsola = (req, res)=>{
     console.log(req.body)
     

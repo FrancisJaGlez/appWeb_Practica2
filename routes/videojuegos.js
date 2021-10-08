@@ -3,7 +3,9 @@ const express = require('express')
 const router = express.Router()
 const vjController = require('../controllers/videojuegos')
 
-//Servicio para procesar los datos del formulario  CREATE
+//Servicio para procesar los datos del formulario  
+
+//Crea un videojuego CREATE
 router.post('/agregarVideojuego',vjController.postAgregarVideojuego)
 //Consulta de videojuegos READ
 router.get('/obtenerVideojuegos',vjController.getObtenerVideojuegos)
